@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+        <ul>
+			<li>Positive Sentiments: {{ sentiment_counts.positive }}</li>
+            <li>Negative Sentiments: {{ sentiment_counts.negative }}</li>
+            <li>Neutral Sentiments: {{ sentiment_counts.neutral }}</li>
+			<li>Social Media Risk Ratio: {{ sentiment_counts.positive + sentiment_counts.neutral }} : {{ sentiment_counts.negative }}</li>
+		<ul><br>
+			<br>
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li>
+                    <strong>{{ result.network }} @</strong> {{ result.posted }}: {{ result.text }}: {{ result.type }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

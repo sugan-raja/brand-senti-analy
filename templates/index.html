@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRR tool</title>
+</head>
+<body>
+    <h1>Social Media Risk Readiness (SMRR) tool</h1>
+    <form action="/search" method="post">
+		<table>
+			<tr>
+				<td><label for="query">Brand keyword(s): </label></td>
+			    <td><input type="text" id="query" name="query" required></td>
+			</tr>
+			<tr><td></td></tr>
+		    <tr>
+			    <td><label for="trainedScore">Trained employees:</label></td>
+			    <td><input type="text" id="trainedScore" name="trainedScore" required></td>
+		    </tr>
+		    <tr>
+				<td><label for="untrainedScore">Untrained / New employees:</label></td>
+			    <td><input type="text" id="untrainedScore" name="untrainedScore" required></td>
+			</tr>
+			<tr><td></td></tr>
+		    <tr>
+				<td><label for="daysAudit">Number of days, since last audit:</label></td>
+				<td><input type="text" id="daysAudit" name="daysAudit" required></td>
+			</tr>
+			<tr><td></td></tr>
+			<tr><td></td></tr>
+            <tr>
+				<td colspan=3 align="center"><button type="submit">Calculate</button></td>
+			</tr>
+		</table>
+				
+    </form>
+</body>
+</html>

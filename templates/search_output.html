@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRR tool</title>
+</head>
+<body>
+	
+	<table border="1" style="width: 100%; text-align: center;">
+		<tr>
+			<th colspan=4><h1>Brand Sentiment Analysis for: "{{ query }}"</h1></th>
+		</tr>
+        <tr>
+            <th>Risk</th>
+            <th>Risk Intensity</th>
+            <th>Risk Probability</th>
+			<th>Recommended Action</th>
+        </tr>
+		<tr>
+            <th>Brand Sentiment</th>
+            <td>{{ output.bssIntensity }}</td>
+            <td>{{ output.bssProb }}</td>
+			<td align="left">{{ output.bssRecommAction }}</td>
+        </tr>
+		<tr>
+            <th>Employee Training</th>
+            <td>{{ output.etsIntensity }}</td>
+            <td>{{ output.etsProb }}</td>
+			<td align="left">{{ output.etsRecommAction }}</td>
+        </tr>
+		<tr>
+            <th>Social Media Audit</th>
+            <td>{{ output.aasIntensity }}</td>
+            <td>{{ output.aasProb }}</td>
+			<td align="left">{{ output.aasRecommAction }}</td>
+        </tr>
+		<tr>
+            <th>Brand Sentiment Analysis</th>
+            <td colspan=2>{{ output.bssCounts }}</td>
+			<td><b>Overall SMRR:</b> {{ output.smrrAverage }}</td>
+        </tr>
+		</table>
+	<!-- Back button to go back to index.html -->
+	<br><br>
+    <a href="/">Back to Calculate</a>
+</body>
+</html>
